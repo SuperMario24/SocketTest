@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent service = new Intent(this,TCPServerService.class);
         startService(service);
 
+        //在工作线程中连接到服务端，接收服务端的消息
         new Thread(new Runnable() {
             @Override
             public void run() {
